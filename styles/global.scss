@@ -1,1 +1,19 @@
+// import normalize.css
 @import 'normalize.css';
+// import google font
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+// color variables
+$colors: (
+	'pure-black': #000000,
+	'light-grey': #dfdfdf,
+	'pure-white': #ffffff,
+	'accent-1': #ffc593,
+	'accent-2': #bc7198,
+	'accent-3': #5a77ff,
+);
+
+html,
+body {
+	font-family: 'DM Sans', sans-serif;
+}
