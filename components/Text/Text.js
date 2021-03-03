@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Text = ({ variant, children, className }) => {
-	const CustomTag = `${variant}`;
-	return <CustomTag className={`${className}`}>{children}</CustomTag>;
+const Text = ({ variant, children }) => {
+	const CustomTag = `${!variant ? 'p' : variant}`;
+
+	return <CustomTag>{children}</CustomTag>;
 };
 
 export default Text;
