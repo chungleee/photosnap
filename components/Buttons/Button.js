@@ -1,5 +1,5 @@
 import React from 'react';
-import RightArrow from '../Icons/RightArrow';
+import RightArrow from '../Icons/RightArrow/RightArrow';
 import classes from './Button.module.scss';
 
 const Button = ({ children, variant }) => {
