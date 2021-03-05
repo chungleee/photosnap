@@ -1,0 +1,16 @@
+@import 'variables';
+
+// *** BREAKPOINTS ***
+// tablet
+@mixin break-tablet {
+	@media (min-width: map-get($map: $breakpoints, $key: tablet)) {
+		@content;
+	}
+}
+
+// desktop
+@mixin break-desktop {
+	@media (min-width: map-get($map: $breakpoints, $key: desktop)) {
+		@content;
+	}
+}
