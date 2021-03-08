@@ -14,3 +14,12 @@
 		@content;
 	}
 }
+
+// *** UTILITY CLASSES ***
+@mixin show {
+	display: block;
+}
+
+@mixin hidden {
+	display: none;
+}
