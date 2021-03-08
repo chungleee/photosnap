@@ -2,10 +2,10 @@ import React from 'react';
 import RightArrow from '../Icons/RightArrow/RightArrow';
 import classes from './Button.module.scss';
 
-const Button = ({ children, variant }) => {
+const Button = ({ children, variant, className }) => {
 	return (
 		<button
-			className={`${
+			className={`${className} ${
 				!variant
 					? classes.button__default
 					: variant === 'white'
