@@ -5,7 +5,7 @@ import classes from './Button.module.scss';
 const Button = ({ children, variant, className }) => {
 	return (
 		<button
-			className={`${className} ${
+			className={`${
 				!variant
 					? classes.button__default
 					: variant === 'white'
@@ -15,7 +15,7 @@ const Button = ({ children, variant, className }) => {
 					: variant === 'black-arrow'
 					? classes.button__black__arrow
 					: ''
-			}`}
+			} ${className}`}
 		>
 			{children}
 
@@ -26,7 +26,7 @@ const Button = ({ children, variant, className }) => {
 						: variant === 'black-arrow'
 						? classes.show
 						: classes.hidden
-				}`}
+				} ${className}`}
 			/>
 		</button>
 	);
