@@ -23,3 +23,17 @@
 @mixin hidden {
 	display: none;
 }
+
+@mixin ul_block {
+	ul {
+		display: flex;
+		list-style: none;
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: bold;
+		letter-spacing: 2px;
+		padding: 0;
+
+		@content;
+	}
+}
