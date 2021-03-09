@@ -5,11 +5,12 @@ import Button from '../Buttons/Button';
 import Logo from '../Icons/Logo/Logo';
 import MenuIcon from '../Icons/Menu/MenuIcon';
 import CloseIcon from '../Icons/Menu/CloseIcon';
+import MenuDropdown from '../MenuDropdown/MenuDropdown';
 
 const Header = () => {
 	const [clicked, setClicked] = useState(false);
 
-	const handleToggleMenuIcon = () => {
+	const handleToggleDropdown = () => {
 		setClicked(!clicked);
 	};
 
@@ -32,10 +33,13 @@ const Header = () => {
 						</li>
 					</ul>
 				</div>
-				<Button className={classes.invite__button}>get an invite</Button>
-				<div className={classes.menu__icons} onClick={handleToggleMenuIcon}>
+				<span className={classes.invite__button}>
+					<Button>get an invite</Button>
+				</span>
+				<div className={classes.menu__icons} onClick={handleToggleDropdown}>
 					{clicked ? <CloseIcon /> : <MenuIcon />}
 				</div>
+				{clicked ? <MenuDropdown toggled={clicked} /> : null}
 			</header>
 		</Container>
 	);
