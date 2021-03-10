@@ -1,15 +1,20 @@
 @import '../../styles/mixins';
 
+// .container {
+// 	padding: 0 1.5rem;
+
+// 	// tablet
+// 	@include break-tablet {
+// 		padding: 0 3rem;
+// 	}
+
+// 	// desktop
+// 	@include break-desktop {
+// 		padding: 0 7rem;
+// 	}
+// }
+
 .container {
-	padding: 0 1.5rem;
-
-	// tablet
-	@include break-tablet {
-		padding: 0 3rem;
-	}
-
-	// desktop
-	@include break-desktop {
-		padding: 0 7rem;
-	}
+	width: 90%;
+	margin: 0 auto;
 }
