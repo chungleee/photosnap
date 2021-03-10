@@ -1,4 +1,5 @@
 @import '../../styles/variables';
+@import '../../styles/mixins';
 
 .footer {
 	height: 550px;
@@ -33,6 +34,7 @@
 
 	.footer__links {
 		text-align: center;
+
 		li {
 			margin: 1rem 0;
 		}
@@ -40,5 +42,46 @@
 
 	p {
 		color: map-get($map: $colors, $key: light-grey);
+	}
+
+	@include break-tablet {
+		height: 300px;
+
+		.footer__container {
+			display: block;
+			position: relative;
+		}
+
+		.footer__logo {
+			position: absolute;
+			top: 3rem;
+		}
+
+		.footer__links {
+			position: absolute;
+			top: 3rem;
+			display: flex;
+
+			li {
+				margin-right: 2rem;
+			}
+		}
+
+		.footer__socials {
+			position: absolute;
+			bottom: 3rem;
+		}
+
+		.footer__invite__button {
+			position: absolute;
+			right: 0;
+			top: 2.5rem;
+		}
+
+		.footer__copyright {
+			position: absolute;
+			right: 0;
+			bottom: 3.5rem;
+		}
 	}
 }
