@@ -26,7 +26,7 @@ const Button = ({ children, variant, className }) => {
 						: variant === 'black-arrow'
 						? classes.show
 						: classes.hidden
-				} ${className}`}
+				}`}
 			/>
 		</button>
 	);
