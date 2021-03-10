@@ -13,7 +13,7 @@ const Footer = () => {
 	return (
 		<footer className={classes.footer}>
 			<Container className={classes.footer__container}>
-				<div>
+				<div className={classes.footer__logo}>
 					<Logo fill='#fff' />
 				</div>
 				<ul className={classes.footer__socials}>
@@ -47,9 +47,17 @@ const Footer = () => {
 						<a href='#'>pricing</a>
 					</li>
 				</ul>
-				<Button variant='black-arrow'>get an invite</Button>
 
-				<p>Copyright {new Date().getFullYear()}. All Rights Reserved </p>
+				<Button
+					className={classes.footer__invite__button}
+					variant='black-arrow'
+				>
+					get an invite
+				</Button>
+
+				<p className={classes.footer__copyright}>
+					Copyright {new Date().getFullYear()}. All Rights Reserved{' '}
+				</p>
 			</Container>
 		</footer>
 	);
