@@ -39,7 +39,12 @@ const Header = () => {
 				<div className={classes.menu__icons} onClick={handleToggleDropdown}>
 					{clicked ? <CloseIcon /> : <MenuIcon />}
 				</div>
-				{clicked ? <MenuDropdown toggled={clicked} /> : null}
+				{clicked ? (
+					<MenuDropdown
+						toggled={clicked}
+						handleToggleDropdown={handleToggleDropdown}
+					/>
+				) : null}
 			</header>
 		</Container>
 	);
