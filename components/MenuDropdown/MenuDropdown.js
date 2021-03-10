@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Button from '../Buttons/Button';
 import classes from './MenuDropdown.module.scss';
 
-const MenuDropdown = ({ toggled }) => {
+const MenuDropdown = ({ toggled, handleToggleDropdown }) => {
 	useEffect(() => {
 		document.getElementById('dropdown').style.opacity = '1';
 	}, [toggled]);
@@ -11,13 +11,13 @@ const MenuDropdown = ({ toggled }) => {
 		<div id='dropdown' className={`${classes.dropdown}`}>
 			<div className={classes.menu__dropdown}>
 				<ul>
-					<li>
+					<li onClick={handleToggleDropdown}>
 						<a href='#'>stories</a>
 					</li>
-					<li>
+					<li onClick={handleToggleDropdown}>
 						<a href='#'>features</a>
 					</li>
-					<li>
+					<li onClick={handleToggleDropdown}>
 						<a href='#'>pricing</a>
 					</li>
 				</ul>
