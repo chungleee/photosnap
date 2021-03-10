@@ -1,0 +1,44 @@
+@import '../../styles/variables';
+
+.footer {
+	height: 550px;
+	background-color: map-get($map: $colors, $key: pure-black);
+
+	.footer__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: inherit;
+	}
+
+	ul {
+		color: map-get($map: $colors, $key: pure-white);
+		list-style: none;
+		padding: 0;
+		font-weight: bold;
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		margin: 1.5rem 0;
+	}
+
+	.footer__socials {
+		display: flex;
+
+		li {
+			margin: 0 0.4rem;
+		}
+	}
+
+	.footer__links {
+		text-align: center;
+		li {
+			margin: 1rem 0;
+		}
+	}
+
+	p {
+		color: map-get($map: $colors, $key: light-grey);
+	}
+}
