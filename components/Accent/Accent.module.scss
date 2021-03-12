@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.accent__rectangle {
+	height: 5px;
+	width: 33%;
+	background: linear-gradient(
+		to top right,
+		map-get($map: $colors, $key: accent-1),
+		map-get($map: $colors, $key: accent-2),
+		map-get($map: $colors, $key: accent-3)
+	);
+}
