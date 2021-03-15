@@ -9,6 +9,15 @@
 	display: flex;
 	flex-direction: column;
 
+	picture {
+		line-height: 0;
+
+		// img {
+		// 	height: 100%;
+		// 	width: 100%;
+		// }
+	}
+
 	h1 {
 		text-transform: uppercase;
 	}
@@ -36,21 +45,42 @@
 		.container {
 			order: 1;
 			justify-content: center;
+			height: 300px;
+			margin-top: auto;
+			margin-bottom: auto;
 
 			.inner__container {
-				width: 400px;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				width: 80%;
 
 				h1 {
-					margin-top: 0;
+					margin: 0;
+				}
+
+				.hero__cta {
+					justify-content: start;
+					padding: 0;
 				}
 			}
 		}
 
 		.accent__rectangle {
-			height: 50%;
+			height: 100%;
 			width: 5px;
 			left: 0;
-			top: 25%;
+		}
+	}
+
+	@include break-desktop {
+		picture {
+			width: 830px;
+		}
+
+		.hero__cta {
+			align-items: end;
 		}
 	}
 }
