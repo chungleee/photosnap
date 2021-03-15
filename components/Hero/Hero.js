@@ -9,12 +9,13 @@ const Hero = ({ children, images, button }) => {
 		<div className={classes.hero}>
 			<picture>
 				<source
-					srcSet='/assets/home/tablet/create-and-share.jpg'
-					media='(min-width: 768px)'
-				/>
-				<source
 					srcSet='/assets/home/desktop/create-and-share.jpg'
 					media='(min-width: 1440px)'
+				/>
+
+				<source
+					srcSet='/assets/home/tablet/create-and-share.jpg'
+					media='(min-width: 768px)'
 				/>
 
 				<img
@@ -32,7 +33,11 @@ const Hero = ({ children, images, button }) => {
 							</child.type>
 						);
 					})}
-					{button ? <Button variant='black-arrow'>{button}</Button> : null}
+					{button ? (
+						<Button variant='black-arrow' className={classes.hero__cta}>
+							{button}
+						</Button>
+					) : null}
 				</div>
 			</Container>
 		</div>
