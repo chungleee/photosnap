@@ -2,7 +2,7 @@ import React from 'react';
 import RightArrow from '../Icons/RightArrow/RightArrow';
 import classes from './Button.module.scss';
 
-const Button = ({ children, variant, className }) => {
+const Button = ({ children, variant, className, fill }) => {
 	return (
 		<button
 			className={`${
@@ -20,6 +20,7 @@ const Button = ({ children, variant, className }) => {
 			{children}
 
 			<RightArrow
+				fill={fill}
 				className={`${
 					variant === 'arrow'
 						? classes.show
