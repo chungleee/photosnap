@@ -3,22 +3,14 @@ import classes from './HomeCard.module.scss';
 import Container from '../Container/Container';
 import Button from '../Buttons/Button';
 
-const HomeCard = ({ children }) => {
+const HomeCard = ({ children, images }) => {
 	return (
 		<div className={classes.hero}>
 			<picture>
-				<source
-					srcSet='/assets/home/desktop/create-and-share.jpg'
-					media='(min-width: 1440px)'
-				/>
-
-				<source
-					srcSet='/assets/home/tablet/create-and-share.jpg'
-					media='(min-width: 768px)'
-				/>
-
+				<source srcSet={images.desktop} media='(min-width: 1440px)' />
+				<source srcSet={images.tablet} media='(min-width: 768px)' />
 				<img
-					src='/assets/home/mobile/create-and-share.jpg'
+					src={images.mobile}
 					alt='Person standing on boardwalk by the lake'
 				/>
 			</picture>
