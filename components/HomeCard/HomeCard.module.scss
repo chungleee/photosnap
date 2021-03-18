@@ -1,0 +1,87 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.hero {
+	height: 715px;
+	background-color: map-get($map: $colors, $key: pure-white);
+	color: map-get($map: $colors, $key: pure-black);
+	display: flex;
+	flex-direction: column;
+
+	picture {
+		line-height: 0;
+	}
+
+	h1 {
+		text-transform: uppercase;
+	}
+
+	.container {
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		button {
+			width: 200px;
+			padding-left: 0;
+			justify-content: flex-start;
+		}
+	}
+
+	@include break-tablet {
+		height: 650px;
+		flex-direction: row;
+
+		picture {
+			order: 2;
+			width: 275px;
+		}
+
+		.container {
+			order: 1;
+			justify-content: center;
+			height: 300px;
+			margin-top: auto;
+			margin-bottom: auto;
+
+			.inner__container {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				width: 80%;
+
+				h1 {
+					margin: 0;
+				}
+
+				.hero__cta {
+					justify-content: start;
+					padding: 0;
+				}
+			}
+		}
+
+		.accent__rectangle {
+			height: 100%;
+			width: 5px;
+			left: 0;
+		}
+	}
+
+	@include break-desktop {
+		picture {
+			width: 830px;
+		}
+
+		.hero__cta {
+			align-items: end;
+		}
+	}
+}
+
+.accent__rectangle {
+	position: absolute;
+	top: 0;
+}
