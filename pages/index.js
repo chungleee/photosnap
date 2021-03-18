@@ -1,29 +1,11 @@
 import React from 'react';
-import Button from '../components/Buttons/Button';
 import Hero from '../components/Hero/Hero';
 import HomeCard from '../components/HomeCard/HomeCard';
 
 const Home = () => {
 	return (
 		<div>
-			<Hero
-				images={[
-					{
-						src: '/assets/home/mobile/create-and-share.jpg',
-						media: '375px',
-					},
-					{
-						src: '/assets/home/tablet/create-and-share.jpg',
-						media: '768px',
-					},
-					{
-						src: '/assets/home/desktop/create-and-share.jpg',
-						media: '1440px',
-					},
-				]}
-				alt='Person on lake boardwalk'
-				button='get an invite'
-			>
+			<Hero alt='Person on lake boardwalk' button='get an invite'>
 				<h1>create and share your photo stories.</h1>
 				<p>
 					Photosnap is a platform for photographers and visial storytellers. We
@@ -31,7 +13,14 @@ const Home = () => {
 				</p>
 			</Hero>
 
-			<HomeCard>
+			<HomeCard
+				images={{
+					mobile: '/assets/home/mobile/beautiful-stories.jpg',
+					tablet: '/assets/home/tablet/beautiful-stories.jpg',
+					desktop: '/assets/home/desktop/beautiful-stories.jpg',
+					alt: 'Laptop on workstation',
+				}}
+			>
 				<h1>
 					beautiful stories <br /> every time
 				</h1>
@@ -42,7 +31,14 @@ const Home = () => {
 				</p>
 			</HomeCard>
 
-			<HomeCard>
+			<HomeCard
+				images={{
+					mobile: '/assets/home/mobile/designed-for-everyone.jpg',
+					tablet: '/assets/home/tablet/designed-for-everyone.jpg',
+					desktop: '/assets/home/desktop/designed-for-everyone.jpg',
+					alt: 'Photographer with equipment',
+				}}
+			>
 				<h1>designed for everyone</h1>
 				<p>
 					Photosnap can help you create stories that resonate with your
