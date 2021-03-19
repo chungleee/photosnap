@@ -3,9 +3,9 @@ import classes from './HomeCard.module.scss';
 import Container from '../Container/Container';
 import Button from '../Buttons/Button';
 
-const HomeCard = ({ children, images }) => {
+const HomeCard = ({ children, images, flipped }) => {
 	return (
-		<div className={classes.hero}>
+		<div className={`${classes.hero} ${flipped && classes.flipped}`}>
 			<picture>
 				<source srcSet={images.desktop} media='(min-width: 1440px)' />
 				<source srcSet={images.tablet} media='(min-width: 768px)' />
