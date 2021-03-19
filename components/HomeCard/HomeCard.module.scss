@@ -11,7 +11,8 @@
 	picture {
 		line-height: 0;
 		img {
-			height: 100%;
+			height: auto;
+			// height: 100%;
 		}
 	}
 
@@ -33,16 +34,17 @@
 	}
 
 	@include break-tablet {
-		height: 650px;
+		height: auto;
+		// height: 650px;
 		flex-direction: row;
 
 		picture {
-			order: 2;
+			order: 1;
 			width: 275px;
 		}
 
 		.container {
-			order: 1;
+			order: 2;
 			justify-content: center;
 			height: 300px;
 			margin-top: auto;
@@ -87,4 +89,15 @@
 .accent__rectangle {
 	position: absolute;
 	top: 0;
+}
+
+.flipped {
+	@include break-tablet {
+		picture {
+			order: 2;
+		}
+		.container {
+			order: 1;
+		}
+	}
 }
