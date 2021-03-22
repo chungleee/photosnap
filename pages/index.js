@@ -3,6 +3,7 @@ import Grid from '../components/Grid/Grid';
 import Hero from '../components/Hero/Hero';
 import HomeCard from '../components/HomeCard/HomeCard';
 import StoryCard from '../components/StoryCard/StoryCard';
+import classes from './index.module.scss';
 
 const Home = () => {
 	const featuredStories = [
@@ -85,7 +86,7 @@ const Home = () => {
 				</p>
 			</HomeCard>
 
-			<Grid>
+			<Grid className={classes.grid}>
 				{featuredStories.map((storyData) => {
 					return <StoryCard data={storyData} key={storyData.title} />;
 				})}
