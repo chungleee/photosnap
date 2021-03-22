@@ -1,0 +1,7 @@
+@import '../styles/mixins';
+
+.grid {
+	@include break-desktop {
+		flex-wrap: unset;
+	}
+}
