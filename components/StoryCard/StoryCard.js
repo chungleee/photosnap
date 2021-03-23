@@ -6,9 +6,7 @@ const StoryCard = ({ data }) => {
 	console.log('data: ', data);
 	return (
 		<div className={classes.storycard}>
-			<picture
-			// className={classes.storycard__image}
-			>
+			<picture>
 				<source media='(min-width: 768px)' srcSet={data.images.tablet} />
 				<img
 					className={classes.storycard__image}
