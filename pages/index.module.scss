@@ -6,6 +6,14 @@
 	}
 }
 
-.feature__cards__grid {
+.featured__cards__container {
+	display: flex;
+	justify-content: center;
 	align-items: center;
+	height: 900px;
+
+	.feature__cards__grid {
+		align-items: center;
+		height: 800px;
+	}
 }
