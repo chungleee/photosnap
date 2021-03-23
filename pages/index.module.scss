@@ -12,8 +12,22 @@
 	align-items: center;
 	height: 900px;
 
+	@include break-desktop {
+		height: 500px;
+	}
+
 	.feature__cards__grid {
 		align-items: center;
-		height: 800px;
+		height: 80%;
+
+		@include break-tablet {
+			flex-direction: column;
+			flex-wrap: unset;
+		}
+
+		@include break-desktop {
+			flex-direction: row;
+			justify-content: space-evenly;
+		}
 	}
 }
