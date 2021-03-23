@@ -4,7 +4,7 @@ import Container from '../Container/Container';
 import Button from '../Buttons/Button';
 import Accent from '../Accent/Accent';
 
-const Hero = ({ children, images, button }) => {
+const Hero = ({ children, button }) => {
 	return (
 		<div className={classes.hero}>
 			<picture>

@@ -3,7 +3,6 @@ import classes from './StoryCard.module.scss';
 import Button from '../Buttons/Button';
 
 const StoryCard = ({ data }) => {
-	console.log('data: ', data);
 	return (
 		<div className={classes.storycard}>
 			<picture>
