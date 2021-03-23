@@ -1,7 +1,11 @@
 @import '../styles/mixins';
 
-.grid {
+.featured__stories__grid {
 	@include break-desktop {
 		flex-wrap: unset;
 	}
+}
+
+.feature__cards__grid {
+	align-items: center;
 }
