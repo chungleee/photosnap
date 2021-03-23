@@ -1,9 +1,18 @@
 import React from 'react';
+import Container from '../components/Container/Container';
 import Grid from '../components/Grid/Grid';
 import Hero from '../components/Hero/Hero';
 import HomeCard from '../components/HomeCard/HomeCard';
 import StoryCard from '../components/StoryCard/StoryCard';
 import classes from './index.module.scss';
+
+import BoostExposureIcon from '../components/Icons/Features/BoostExposureIcon';
+import CustomDomainIcon from '../components/Icons/Features/CustomDomainIcon';
+import DragDropIcon from '../components/Icons/Features/DragDropIcon';
+import EmbedIcon from '../components/Icons/Features/EmbedIcon';
+import NoLimitIcon from '../components/Icons/Features/NoLimitIcon';
+import ResponsiveIcon from '../components/Icons/Features/ResponsiveIcon';
+import FeatureCard from '../components/FeatureCard/FeatureCard';
 
 const Home = () => {
 	const featuredStories = [
@@ -86,11 +95,25 @@ const Home = () => {
 				</p>
 			</HomeCard>
 
-			<Grid className={classes.grid}>
+			<Grid className={classes.featured__stories__grid}>
 				{featuredStories.map((storyData) => {
 					return <StoryCard data={storyData} key={storyData.title} />;
 				})}
 			</Grid>
+
+			<Container>
+				<Grid className={classes.feature__cards__grid}>
+					<FeatureCard>
+						<h3>100% Responsive</h3>
+						<p>
+							No matter which device you're on, our site is fully responsive and
+							stories look beautiful on any screen.
+						</p>
+					</FeatureCard>
+					<NoLimitIcon />
+					<EmbedIcon />
+				</Grid>
+			</Container>
 		</div>
 	);
 };
