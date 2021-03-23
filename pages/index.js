@@ -1,17 +1,10 @@
 import React from 'react';
+import classes from './index.module.scss';
 import Container from '../components/Container/Container';
 import Grid from '../components/Grid/Grid';
 import Hero from '../components/Hero/Hero';
 import HomeCard from '../components/HomeCard/HomeCard';
 import StoryCard from '../components/StoryCard/StoryCard';
-import classes from './index.module.scss';
-
-import BoostExposureIcon from '../components/Icons/Features/BoostExposureIcon';
-import CustomDomainIcon from '../components/Icons/Features/CustomDomainIcon';
-import DragDropIcon from '../components/Icons/Features/DragDropIcon';
-import EmbedIcon from '../components/Icons/Features/EmbedIcon';
-import NoLimitIcon from '../components/Icons/Features/NoLimitIcon';
-import ResponsiveIcon from '../components/Icons/Features/ResponsiveIcon';
 import FeatureCard from '../components/FeatureCard/FeatureCard';
 
 const Home = () => {
@@ -65,6 +58,27 @@ const Home = () => {
 		},
 	};
 
+	const featuredFeatures = [
+		{
+			variant: 'responsive',
+			headline: '100% Responsive',
+			description:
+				"No matter which device you're on, our site is fully responsive and stories look beautiful on any screen.",
+		},
+		{
+			variant: 'no-limit',
+			headline: 'No Photo Upload Limit',
+			description:
+				'Our tool has no limits on uploaads or bandwidth. Freely upload in bulk and share all of your stories in one go.',
+		},
+		{
+			variant: 'embed',
+			headline: 'Available to Embed',
+			description:
+				'Embed Tweets, Facebook posts, Instagram media, Vimeo or Youtube videos, Google Maps, and more.',
+		},
+	];
+
 	return (
 		<div>
 			<Hero alt='Person on lake boardwalk' button='get an invite'>
@@ -101,17 +115,16 @@ const Home = () => {
 				})}
 			</Grid>
 
-			<Container>
+			<Container className={classes.featured__cards__container}>
 				<Grid className={classes.feature__cards__grid}>
-					<FeatureCard>
-						<h3>100% Responsive</h3>
-						<p>
-							No matter which device you're on, our site is fully responsive and
-							stories look beautiful on any screen.
-						</p>
-					</FeatureCard>
-					<NoLimitIcon />
-					<EmbedIcon />
+					{featuredFeatures.map((feature) => {
+						return (
+							<FeatureCard variant={feature.variant}>
+								<h3>{feature.headline}</h3>
+								<p>{feature.description}</p>
+							</FeatureCard>
+						);
+					})}
 				</Grid>
 			</Container>
 		</div>
