@@ -1,4 +1,8 @@
 .feature__card {
 	text-align: center;
 	width: 310px;
+
+	.feature__card__icon {
+		margin: 2rem 0;
+	}
 }
