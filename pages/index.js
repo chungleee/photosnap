@@ -8,6 +8,11 @@ import StoryCard from '../components/StoryCard/StoryCard';
 import FeatureCard from '../components/FeatureCard/FeatureCard';
 
 const Home = () => {
+	const heroImages = {
+		mobile: '/assets/home/mobile/create-and-share.jpg',
+		tablet: '/assets/home/tablet/create-and-share.jpg',
+		desktop: '/assets/home/desktop/create-and-share.jpg',
+	};
 	const featuredStories = [
 		{
 			images: {
@@ -81,7 +86,11 @@ const Home = () => {
 
 	return (
 		<div>
-			<Hero alt='Person on lake boardwalk' button='get an invite'>
+			<Hero
+				images={heroImages}
+				alt='Person on lake boardwalk'
+				button='get an invite'
+			>
 				<h1>create and share your photo stories.</h1>
 				<p>
 					Photosnap is a platform for photographers and visial storytellers. We
