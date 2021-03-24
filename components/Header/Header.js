@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import classes from './Header.module.scss';
 import Container from '../Container/Container';
 import Button from '../Buttons/Button';
@@ -23,13 +24,13 @@ const Header = () => {
 				<div className={classes.menu}>
 					<ul>
 						<li>
-							<a href='#'>stories</a>
+							<Link href='#'>stories</Link>
 						</li>
 						<li>
-							<a href='#'>features</a>
+							<Link href='#'>features</Link>
 						</li>
 						<li>
-							<a href='#'>pricing</a>
+							<Link href='/pricing'>pricing</Link>
 						</li>
 					</ul>
 				</div>

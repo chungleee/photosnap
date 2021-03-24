@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Link from 'next/link';
 import Button from '../Buttons/Button';
 import classes from './MenuDropdown.module.scss';
 
@@ -12,13 +13,13 @@ const MenuDropdown = ({ toggled, handleToggleDropdown }) => {
 			<div className={classes.menu__dropdown}>
 				<ul>
 					<li onClick={handleToggleDropdown}>
-						<a href='#'>stories</a>
+						<Link href='#'>stories</Link>
 					</li>
 					<li onClick={handleToggleDropdown}>
-						<a href='#'>features</a>
+						<Link href='#'>features</Link>
 					</li>
 					<li onClick={handleToggleDropdown}>
-						<a href='#'>pricing</a>
+						<Link href='/pricing'>pricing</Link>
 					</li>
 				</ul>
 
