@@ -4,24 +4,15 @@ import Container from '../Container/Container';
 import Button from '../Buttons/Button';
 import Accent from '../Accent/Accent';
 
-const Hero = ({ children, button }) => {
+const Hero = ({ children, button, images, alt }) => {
 	return (
 		<div className={classes.hero}>
 			<picture>
-				<source
-					srcSet='/assets/home/desktop/create-and-share.jpg'
-					media='(min-width: 1440px)'
-				/>
+				<source srcSet={images.desktop} media='(min-width: 1440px)' />
 
-				<source
-					srcSet='/assets/home/tablet/create-and-share.jpg'
-					media='(min-width: 768px)'
-				/>
+				<source srcSet={images.tablet} media='(min-width: 768px)' />
 
-				<img
-					src='/assets/home/mobile/create-and-share.jpg'
-					alt='Person standing on boardwalk by the lake'
-				/>
+				<img src={images.mobile} alt={alt} />
 			</picture>
 			<Container className={classes.container}>
 				<Accent className={classes.accent__rectangle} />
