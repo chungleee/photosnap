@@ -1,0 +1,12 @@
+@import '../../styles/mixins';
+
+.grid {
+	display: flex;
+	flex-direction: column;
+
+	@include break-tablet {
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-grow: 1;
+	}
+}

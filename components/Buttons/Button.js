@@ -1,8 +1,8 @@
 import React from 'react';
-import RightArrow from '../Icons/RightArrow';
+import RightArrow from '../Icons/RightArrow/RightArrow';
 import classes from './Button.module.scss';
 
-const Button = ({ children, variant }) => {
+const Button = ({ children, variant, className, fill }) => {
 	return (
 		<button
 			className={`${
@@ -15,18 +15,19 @@ const Button = ({ children, variant }) => {
 					: variant === 'black-arrow'
 					? classes.button__black__arrow
 					: ''
-			}`}
+			} ${className}`}
 		>
 			{children}
 
 			<RightArrow
+				fill={fill}
 				className={`${
 					variant === 'arrow'
 						? classes.show
 						: variant === 'black-arrow'
 						? classes.show
 						: classes.hidden
-				}`}
+				} `}
 			/>
 		</button>
 	);

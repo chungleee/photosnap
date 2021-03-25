@@ -1,0 +1,39 @@
+@import 'variables';
+
+// *** BREAKPOINTS ***
+// tablet
+@mixin break-tablet {
+	@media (min-width: map-get($map: $breakpoints, $key: tablet)) {
+		@content;
+	}
+}
+
+// desktop
+@mixin break-desktop {
+	@media (min-width: map-get($map: $breakpoints, $key: desktop)) {
+		@content;
+	}
+}
+
+// *** UTILITY CLASSES ***
+@mixin show {
+	display: block;
+}
+
+@mixin hidden {
+	display: none;
+}
+
+@mixin ul_block {
+	ul {
+		display: flex;
+		list-style: none;
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: bold;
+		letter-spacing: 2px;
+		padding: 0;
+
+		@content;
+	}
+}

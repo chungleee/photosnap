@@ -1,0 +1,33 @@
+@import '../styles/mixins';
+
+.featured__stories__grid {
+	@include break-desktop {
+		flex-wrap: unset;
+	}
+}
+
+.featured__cards__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 900px;
+
+	@include break-desktop {
+		height: 500px;
+	}
+
+	.feature__cards__grid {
+		align-items: center;
+		height: 80%;
+
+		@include break-tablet {
+			flex-direction: column;
+			flex-wrap: unset;
+		}
+
+		@include break-desktop {
+			flex-direction: row;
+			justify-content: space-evenly;
+		}
+	}
+}

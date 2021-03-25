@@ -1,12 +1,12 @@
 import React from 'react';
 
-const RightArrow = ({ className }) => {
+const RightArrow = ({ className, fill }) => {
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
-			fill='none'
+			fill={fill || '#fff'}
 			viewBox='0 0 24 24'
-			stroke='currentColor'
+			stroke={fill || '#fff'}
 			height='15px'
 			width='25px'
 			className={className ? className : ''}
