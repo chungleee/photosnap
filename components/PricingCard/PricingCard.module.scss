@@ -6,6 +6,7 @@
 	width: 100%;
 	text-align: center;
 	display: flex;
+	background-color: map-get($map: $colors, $key: off-white);
 
 	.accent {
 		display: none;
@@ -31,6 +32,35 @@
 	button {
 		margin: 0 auto;
 	}
+
+	@include break-tablet {
+		.pricing__card__details__wrapper {
+			display: flex;
+			justify-content: space-between;
+
+			.pricing__card__details__left,
+			.pricing__card__details__right {
+				width: 45%;
+			}
+
+			.pricing__card__details__left {
+				text-align: left;
+			}
+
+			.pricing__card__details__right {
+				text-align: right;
+
+				h1 {
+					margin: 0;
+				}
+			}
+		}
+
+		button {
+			width: 45%;
+			margin: 0;
+		}
+	}
 }
 
 .pricing__card:nth-of-type(2) {
@@ -42,6 +72,11 @@
 		display: block;
 		position: absolute;
 		width: 100%;
+
+		@include break-tablet {
+			height: 100%;
+			width: 5px;
+		}
 	}
 
 	button {
