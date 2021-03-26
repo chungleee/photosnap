@@ -3,6 +3,7 @@
 
 .pricing__card {
 	height: 405px;
+	width: 100%;
 	text-align: center;
 	display: flex;
 
@@ -11,7 +12,7 @@
 	}
 
 	.pricing__card__details {
-		margin: auto 0;
+		margin: auto;
 	}
 
 	h1 {
