@@ -46,7 +46,7 @@ const Pricing = () => {
 			<Container>
 				<Grid>
 					{pricingData.map((data) => {
-						return <PricingCard data={data} />;
+						return <PricingCard key={data.description} data={data} />;
 					})}
 				</Grid>
 			</Container>
