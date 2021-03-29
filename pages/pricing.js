@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './pricing.module.scss';
 import Container from '../components/Container/Container';
 import Grid from '../components/Grid/Grid';
 import Hero from '../components/Hero/Hero';
@@ -44,7 +45,7 @@ const Pricing = () => {
 			</Hero>
 
 			<Container>
-				<Grid>
+				<Grid className={classes.pricing__grid}>
 					{pricingData.map((data) => {
 						return <PricingCard key={data.description} data={data} />;
 					})}
