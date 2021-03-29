@@ -34,6 +34,8 @@
 	}
 
 	@include break-tablet {
+		height: 270px;
+
 		.pricing__card__details__wrapper {
 			display: flex;
 			justify-content: space-between;
@@ -61,6 +63,26 @@
 			margin: 0;
 		}
 	}
+
+	@include break-desktop {
+		height: 470px;
+		width: 350px;
+
+		.pricing__card__details__wrapper {
+			flex-direction: column;
+			align-items: center;
+
+			.pricing__card__details__left,
+			.pricing__card__details__right {
+				width: 100%;
+				text-align: center;
+			}
+		}
+
+		button {
+			width: 100%;
+		}
+	}
 }
 
 .pricing__card:nth-of-type(2) {
@@ -76,6 +98,11 @@
 		@include break-tablet {
 			height: 100%;
 			width: 5px;
+		}
+
+		@include break-desktop {
+			height: 5px;
+			width: 100%;
 		}
 	}
 
