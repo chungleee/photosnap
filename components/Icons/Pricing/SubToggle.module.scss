@@ -1,0 +1,16 @@
+@import '../../../styles/variables';
+
+.outer {
+	display: flex;
+	width: 65px;
+	height: 35px;
+	background-color: map-get($map: $colors, $key: light-grey);
+	border-radius: 100193px;
+	.inner {
+		width: 24px;
+		height: 24px;
+		background-color: map-get($map: $colors, $key: pure-black);
+		border-radius: 50%;
+		margin: auto 5px;
+	}
+}
