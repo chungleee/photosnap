@@ -1,5 +1,19 @@
 @import '../styles/mixins';
 
+.plan__type {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	.plan__type__wrapper {
+		width: 250px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
 .pricing__grid {
 	@include break-desktop {
 		flex-direction: row;
