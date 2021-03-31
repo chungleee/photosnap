@@ -128,7 +128,7 @@ const Home = () => {
 				<Grid className={classes.feature__cards__grid}>
 					{featuredFeatures.map((feature) => {
 						return (
-							<FeatureCard variant={feature.variant}>
+							<FeatureCard key={feature.headline} variant={feature.variant}>
 								<h3>{feature.headline}</h3>
 								<p>{feature.description}</p>
 							</FeatureCard>
