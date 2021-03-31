@@ -4,6 +4,7 @@ import Container from '../components/Container/Container';
 import Grid from '../components/Grid/Grid';
 import Hero from '../components/Hero/Hero';
 import PricingCard from '../components/PricingCard/PricingCard';
+import SubToggle from '../components/Icons/Pricing/SubToggle';
 
 const Pricing = () => {
 	const heroImages = {
@@ -43,6 +44,14 @@ const Pricing = () => {
 					photos.
 				</p>
 			</Hero>
+
+			<section className={classes.plan__type}>
+				<div className={classes.plan__type__wrapper}>
+					<h3>Monthly</h3>
+					<SubToggle />
+					<h3>Yearly</h3>
+				</div>
+			</section>
 
 			<Container>
 				<Grid className={classes.pricing__grid}>
