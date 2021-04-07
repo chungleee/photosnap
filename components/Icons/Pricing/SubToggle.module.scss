@@ -6,6 +6,9 @@
 	height: 35px;
 	background-color: map-get($map: $colors, $key: light-grey);
 	border-radius: 100193px;
+	&:hover {
+		cursor: pointer;
+	}
 	.inner {
 		width: 24px;
 		height: 24px;
@@ -13,4 +16,14 @@
 		border-radius: 50%;
 		margin: auto 5px;
 	}
+}
+
+.slideRight {
+	transform: translateX(125%);
+	transition: transform 0.5s;
+}
+
+.slideLeft {
+	transform: translateX(0%);
+	transition: transform 0.5s;
 }
