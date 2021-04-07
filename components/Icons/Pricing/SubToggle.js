@@ -1,10 +1,15 @@
 import React from 'react';
 import classes from './SubToggle.module.scss';
 
-const SubToggle = () => {
+const SubToggle = ({ pricingPlan, ...props }) => {
+	console.log('pricing plan: ', pricingPlan);
 	return (
-		<div className={classes.outer}>
-			<div className={classes.inner}></div>
+		<div onClick={props.onClick} className={classes.outer}>
+			<div
+				className={`${classes.inner} ${
+					!pricingPlan.monthly ? classes.slideRight : classes.slideLeft
+				}`}
+			></div>
 		</div>
 	);
 };
