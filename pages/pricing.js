@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classes from './pricing.module.scss';
 import Container from '../components/Container/Container';
 import Grid from '../components/Grid/Grid';
@@ -7,6 +7,8 @@ import PricingCard from '../components/PricingCard/PricingCard';
 import SubToggle from '../components/Icons/Pricing/SubToggle';
 
 const Pricing = () => {
+	const [pricingPlan, setPricingPlan] = useState({ monthly: true });
+
 	const heroImages = {
 		mobile: '/assets/pricing/mobile/hero.jpg',
 		tablet: '/assets/pricing/tablet/hero.jpg',
@@ -47,9 +49,18 @@ const Pricing = () => {
 
 			<section className={classes.plan__type}>
 				<div className={classes.plan__type__wrapper}>
-					<h3>Monthly</h3>
-					<SubToggle />
-					<h3>Yearly</h3>
+					<h3 className={pricingPlan.monthly ? undefined : classes.light__grey}>
+						Monthly
+					</h3>
+					<SubToggle
+						onClick={() => {
+							setPricingPlan({ monthly: !pricingPlan.monthly });
+						}}
+						pricingPlan={pricingPlan}
+					/>
+					<h3 className={pricingPlan.monthly ? classes.light__grey : undefined}>
+						Yearly
+					</h3>
 				</div>
 			</section>
 
