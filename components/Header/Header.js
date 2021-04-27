@@ -16,8 +16,8 @@ const Header = () => {
 	};
 
 	return (
-		<Container>
-			<header className={classes.header}>
+		<header className={classes.header}>
+			<Container className={classes.header__container}>
 				<div>
 					<Logo />
 				</div>
@@ -46,8 +46,8 @@ const Header = () => {
 						handleToggleDropdown={handleToggleDropdown}
 					/>
 				) : null}
-			</header>
-		</Container>
+			</Container>
+		</header>
 	);
 };
 
