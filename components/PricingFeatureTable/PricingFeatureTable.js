@@ -2,41 +2,7 @@ import React from 'react';
 import Check from '../Icons/Pricing/Check';
 import classes from './PricingFeatureTable.module.scss';
 
-const PricingFeatureTable = () => {
-	const features = [
-		{
-			feature: 'unlimited story posting',
-			tiers: ['basic', 'pro', 'business'],
-		},
-		{
-			feature: 'unlimited photo upload',
-			tiers: ['basic', 'pro', 'business'],
-		},
-		{
-			feature: 'embedding custom content',
-			tiers: ['pro', 'business'],
-		},
-		{
-			feature: 'customize metadata',
-			tiers: ['pro', 'business'],
-		},
-		{
-			feature: 'advanced metrics',
-			tiers: ['business'],
-		},
-		{
-			feature: 'photo downloads',
-			tiers: ['business'],
-		},
-		{
-			feature: 'search engine indexing',
-			tiers: ['business'],
-		},
-		{
-			feature: 'custom analytics',
-			tiers: ['business'],
-		},
-	];
+const PricingFeatureTable = ({ features }) => {
 	return (
 		<div>
 			<table className={classes.table}>
