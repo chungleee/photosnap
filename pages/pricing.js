@@ -5,6 +5,7 @@ import Grid from '../components/Grid/Grid';
 import Hero from '../components/Hero/Hero';
 import PricingCard from '../components/PricingCard/PricingCard';
 import SubToggle from '../components/Icons/Pricing/SubToggle';
+import PricingFeatureTable from '../components/PricingFeatureTable/PricingFeatureTable';
 
 const Pricing = () => {
 	const [pricingPlan, setPricingPlan] = useState({ monthly: true });
@@ -70,6 +71,9 @@ const Pricing = () => {
 						return <PricingCard key={data.description} data={data} />;
 					})}
 				</Grid>
+			</Container>
+			<Container>
+				<PricingFeatureTable />
 			</Container>
 		</div>
 	);
