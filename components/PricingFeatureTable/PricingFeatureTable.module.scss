@@ -1,0 +1,62 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.table {
+	width: 100%;
+
+	.table__headings {
+		display: flex;
+		border-bottom: 1px solid map-get($map: $colors, $key: pure-black);
+		align-items: center;
+
+		tr {
+			display: none;
+		}
+
+		@include break-tablet {
+			th {
+				width: 35%;
+			}
+			tr {
+				display: flex;
+				width: 65%;
+				td {
+					width: 33%;
+					text-transform: uppercase;
+					font-weight: bold;
+					font-size: 12px;
+					text-align: center;
+					letter-spacing: 1.67px;
+					color: map-get($map: $colors, $key: pure-black);
+				}
+			}
+		}
+	}
+
+	.table__group {
+		display: flex;
+		flex-direction: column;
+		border-bottom: 1px solid map-get($map: $colors, $key: light-grey);
+		padding-bottom: 0.5rem;
+	}
+
+	.table__tiers {
+		display: flex;
+		margin-bottom: 0.25rem;
+		td {
+			width: 33%;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 10px;
+			letter-spacing: 1.67px;
+			color: map-get($map: $colors, $key: pure-black);
+		}
+	}
+}
+
+.heading {
+	text-transform: uppercase;
+	text-align: left;
+	font-size: 12px;
+	letter-spacing: 2px;
+}
