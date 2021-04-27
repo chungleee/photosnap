@@ -19,7 +19,7 @@ const PricingFeatureTable = ({ features }) => {
 
 				{features.map((feature) => {
 					return (
-						<tr className={classes.table__group}>
+						<tr className={classes.table__group} key={feature.feature}>
 							<th>
 								<h2 className={classes.heading}>{feature.feature}</h2>
 							</th>
