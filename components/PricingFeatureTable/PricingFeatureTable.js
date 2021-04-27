@@ -71,29 +71,6 @@ const PricingFeatureTable = () => {
 						</tr>
 					);
 				})}
-
-				{/*<tr className={classes.table__group}>
-					<th>
-						<h2 className={classes.heading}>unlimited story posting</h2>
-					</th>
-					<tr className={classes.table__tiers}>
-						<td>basic</td>
-						<td>pro</td>
-						<td>business</td>
-					</tr>
-
-					<tr className={classes.table__tiers__checks}>
-						<td>
-							<Check />
-						</td>
-						<td>
-							<Check />
-						</td>
-						<td>
-							<Check />
-						</td>
-					</tr>
-			</tr>*/}
 			</table>
 		</div>
 	);
