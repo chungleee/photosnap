@@ -7,6 +7,7 @@ import PricingCard from '../components/PricingCard/PricingCard';
 import SubToggle from '../components/Icons/Pricing/SubToggle';
 import PricingFeatureTable from '../components/PricingFeatureTable/PricingFeatureTable';
 import { heroImages, pricingData, features } from '../data/pricingData';
+import BetaBanner from '../components/BetaBanner/BetaBanner';
 
 const Pricing = () => {
 	const [pricingPlan, setPricingPlan] = useState({ monthly: true });
@@ -56,6 +57,10 @@ const Pricing = () => {
 				<Container>
 					<PricingFeatureTable features={features} />
 				</Container>
+			</section>
+
+			<section className={classes.section}>
+				<BetaBanner />
 			</section>
 		</div>
 	);
