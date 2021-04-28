@@ -47,7 +47,13 @@ const Pricing = () => {
 				<Container>
 					<Grid className={classes.pricing__grid}>
 						{pricingData.map((data) => {
-							return <PricingCard key={data.description} data={data} />;
+							return (
+								<PricingCard
+									key={data.description}
+									monthly={pricingPlan.monthly}
+									data={data}
+								/>
+							);
 						})}
 					</Grid>
 				</Container>
