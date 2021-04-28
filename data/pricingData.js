@@ -9,19 +9,22 @@ export const pricingData = [
 		plan: 'basic',
 		description:
 			'Includes basic usage of our platform. Recommended for new and aspiring photographers.',
-		price: '19.00',
+		monthly: '19.00',
+		yearly: '190.00',
 	},
 	{
 		plan: 'pro',
 		description:
 			'More advanced features available. Recommended for photography vetarans and professionals.',
-		price: '39.00',
+		monthly: '39.00',
+		yearly: '390.00',
 	},
 	{
 		plan: 'business',
 		description:
 			'Additional features available such as more detailed metrics. Recommended for business owners.',
-		price: '99.00',
+		monthly: '99.00',
+		yearly: '990.00',
 	},
 ];
 
