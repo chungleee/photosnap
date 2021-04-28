@@ -24,10 +24,10 @@ const Header = () => {
 				<div className={classes.menu}>
 					<ul>
 						<li>
-							<Link href='#'>stories</Link>
+							<Link href='/stories'>stories</Link>
 						</li>
 						<li>
-							<Link href='#'>features</Link>
+							<Link href='/features'>features</Link>
 						</li>
 						<li>
 							<Link href='/pricing'>pricing</Link>

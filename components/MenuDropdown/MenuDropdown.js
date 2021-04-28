@@ -15,10 +15,10 @@ const MenuDropdown = ({ toggled, handleToggleDropdown }) => {
 				<div className={classes.menu__dropdown}>
 					<ul>
 						<li onClick={handleToggleDropdown}>
-							<Link href='#'>stories</Link>
+							<Link href='/stories'>stories</Link>
 						</li>
 						<li onClick={handleToggleDropdown}>
-							<Link href='#'>features</Link>
+							<Link href='/features'>features</Link>
 						</li>
 						<li onClick={handleToggleDropdown}>
 							<Link href='/pricing'>pricing</Link>
