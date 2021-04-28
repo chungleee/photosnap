@@ -1,17 +1,29 @@
+@import '../../styles/variables';
 @import '../../styles/mixins';
 
 .dropdown {
 	position: absolute;
 	top: 75px;
+	right: 0;
+	background-color: map-get($map: $colors, $key: pure-white);
 	width: 100%;
 	height: 250px;
 	opacity: 0;
 	transition: opacity 2s;
+
+	@include break-tablet {
+		display: none;
+	}
+}
+
+.dropdown__container {
+	height: 100%;
 }
 
 .menu__dropdown {
 	display: flex;
 	flex-direction: column;
+	height: 100%;
 
 	@include ul_block {
 		flex-direction: column;
@@ -22,6 +34,7 @@
 		border-bottom: 1px solid map-get($map: $colors, $key: light-grey);
 		height: 55%;
 		padding-bottom: 1rem;
+		margin: 0%;
 
 		li:nth-of-type(2) {
 			margin: 1.5rem 0;
@@ -34,12 +47,8 @@
 }
 
 .invite__button {
+	margin-bottom: auto;
 	margin-top: auto;
 	height: 50px;
 	width: 100%;
 }
-
-// .fadeIn {
-// 	opacity: 1;
-// 	transition: opacity 3s;
-// }
