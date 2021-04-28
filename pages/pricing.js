@@ -22,33 +22,41 @@ const Pricing = () => {
 				</p>
 			</Hero>
 
-			<section className={classes.plan__type}>
-				<div className={classes.plan__type__wrapper}>
-					<h3 className={pricingPlan.monthly ? undefined : classes.light__grey}>
-						Monthly
-					</h3>
-					<SubToggle
-						onClick={() => {
-							setPricingPlan({ monthly: !pricingPlan.monthly });
-						}}
-						pricingPlan={pricingPlan}
-					/>
-					<h3 className={pricingPlan.monthly ? classes.light__grey : undefined}>
-						Yearly
-					</h3>
+			<section className={classes.section}>
+				<div className={classes.plan__type}>
+					<div className={classes.plan__type__wrapper}>
+						<h3
+							className={pricingPlan.monthly ? undefined : classes.light__grey}
+						>
+							Monthly
+						</h3>
+						<SubToggle
+							onClick={() => {
+								setPricingPlan({ monthly: !pricingPlan.monthly });
+							}}
+							pricingPlan={pricingPlan}
+						/>
+						<h3
+							className={pricingPlan.monthly ? classes.light__grey : undefined}
+						>
+							Yearly
+						</h3>
+					</div>
 				</div>
+				<Container>
+					<Grid className={classes.pricing__grid}>
+						{pricingData.map((data) => {
+							return <PricingCard key={data.description} data={data} />;
+						})}
+					</Grid>
+				</Container>
 			</section>
 
-			<Container>
-				<Grid className={classes.pricing__grid}>
-					{pricingData.map((data) => {
-						return <PricingCard key={data.description} data={data} />;
-					})}
-				</Grid>
-			</Container>
-			<Container>
-				<PricingFeatureTable features={features} />
-			</Container>
+			<section className={classes.section}>
+				<Container>
+					<PricingFeatureTable features={features} />
+				</Container>
+			</section>
 		</div>
 	);
 };
