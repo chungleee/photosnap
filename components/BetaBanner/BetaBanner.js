@@ -9,11 +9,11 @@ const BetaBanner = () => {
 			<picture>
 				<source
 					media='(min-width: 1440px)'
-					srcset='/assets/shared/desktop/bg-beta.jpg'
+					srcSet='/assets/shared/desktop/bg-beta.jpg'
 				/>
 				<source
 					media='(min-width: 768px)'
-					srcset='/assets/shared/tablet/bg-beta.jpg'
+					srcSet='/assets/shared/tablet/bg-beta.jpg'
 				/>
 				<img src='/assets/shared/mobile/bg-beta.jpg' alt='hero banner' />
 			</picture>
