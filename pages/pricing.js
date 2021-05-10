@@ -13,7 +13,7 @@ const Pricing = () => {
 	const [pricingPlan, setPricingPlan] = useState({ monthly: true });
 
 	return (
-		<div>
+		<div className={classes.pricing__page}>
 			<Hero images={heroImages} alt='Photographer in sunset'>
 				<h1>pricing</h1>
 				<p>

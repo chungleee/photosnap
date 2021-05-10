@@ -29,3 +29,9 @@
 .section {
 	margin: 3rem 0;
 }
+
+.pricing__page {
+	section:last-child {
+		margin-bottom: 0;
+	}
+}
