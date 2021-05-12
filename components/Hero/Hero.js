@@ -4,9 +4,9 @@ import Container from '../Container/Container';
 import Button from '../Buttons/Button';
 import Accent from '../Accent/Accent';
 
-const Hero = ({ children, button, images, alt }) => {
+const Hero = ({ children, button, images, alt, className }) => {
 	return (
-		<div className={classes.hero}>
+		<div className={`${classes.hero} ${className}`}>
 			<picture>
 				<source srcSet={images.desktop} media='(min-width: 1440px)' />
 
