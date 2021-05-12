@@ -1,6 +1,12 @@
 @import '../styles/variables';
 
 .hero {
+	height: auto;
+
+	h1 {
+		text-transform: uppercase;
+	}
+
 	h2 {
 		font-size: 12px;
 		letter-spacing: 2px;
