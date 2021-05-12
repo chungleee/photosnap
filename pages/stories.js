@@ -1,22 +1,23 @@
 import React from 'react';
-import Hero from '../components/Hero/Hero';
 import classes from './stories.module.scss';
 import { stories } from '../data/storiesData';
 import StoryCard from '../components/StoryCard/StoryCard';
+import FeaturedStory from '../components/FeaturedStory/FeaturedStory';
 
 const Stories = () => {
 	return (
 		<div>
-			<Hero
-				images={{
-					desktop: '/assets/stories/desktop/moon-of-appalacia.jpg',
-					tablet: '/assets/stories/tablet/moon-of-appalacia.jpg',
-					mobile: '/assets/stories/mobile/moon-of-appalacia.jpg',
+			<FeaturedStory
+				data={{
+					images: {
+						desktop: '/assets/stories/desktop/moon-of-appalacia.jpg',
+						tablet: '/assets/stories/tablet/moon-of-appalacia.jpg',
+						mobile: '/assets/stories/mobile/moon-of-appalacia.jpg',
+					},
+					title: 'Moon of Appalacia',
 				}}
 				className={classes.hero}
-				button='read the story'
 			>
-				<h2>last month's featured story</h2>
 				<h1>
 					hazy full <br /> moon of <br />
 					appalachia
@@ -30,7 +31,7 @@ const Stories = () => {
 					Kentucky and West Virginia, and while the ridges are not high, the
 					terrain is extremely rugged.
 				</p>
-			</Hero>
+			</FeaturedStory>
 
 			<section>
 				{stories.map((story) => {
