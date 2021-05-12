@@ -33,9 +33,15 @@ const Stories = () => {
 				</p>
 			</FeaturedStory>
 
-			<section>
+			<section className={classes.grid}>
 				{stories.map((story) => {
-					return <StoryCard data={story} key={story.title} />;
+					return (
+						<StoryCard
+							data={story}
+							key={story.title}
+							className={classes.storycard}
+						/>
+					);
 				})}
 			</section>
 		</div>
