@@ -1,4 +1,5 @@
 @import '../styles/variables';
+@import '../styles/mixins';
 
 .hero {
 	height: auto;
@@ -20,6 +21,19 @@
 		color: map-get($map: $colors, $key: light-grey);
 		span {
 			color: map-get($map: $colors, $key: pure-white);
+		}
+	}
+}
+
+.grid {
+	@include break-tablet {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	@include break-desktop {
+		.storycard {
+			width: 25%;
 		}
 	}
 }
