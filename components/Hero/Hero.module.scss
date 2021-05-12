@@ -31,6 +31,11 @@
 		position: relative;
 	}
 
+	.hero__cta {
+		justify-content: start;
+		padding: 0;
+	}
+
 	@include break-tablet {
 		height: auto;
 		// height: 650px;
