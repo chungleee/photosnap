@@ -8,9 +8,9 @@ import EmbedIcon from '../Icons/Features/EmbedIcon';
 import NoLimitIcon from '../Icons/Features/NoLimitIcon';
 
 // variants options = [boost-exposure, custom-domain, drag-drop, embed, no-limit, responsive]
-const FeatureCard = ({ children, variant }) => {
+const FeatureCard = ({ children, variant, className }) => {
 	return (
-		<div className={classes.feature__card}>
+		<div className={`${classes.feature__card} ${className}`}>
 			<div className={classes.feature__card__icon}>
 				{variant === 'boost-exposure' ? (
 					<BoostExposureIcon />
