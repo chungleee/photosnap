@@ -8,13 +8,16 @@ import Pinterest from '../Icons/Socials/pinterest';
 import Twitter from '../Icons/Socials/twitter';
 import Youtube from '../Icons/Socials/youtube';
 import Button from '../Buttons/Button';
+import Link from 'next/link';
 
 const Footer = () => {
 	return (
 		<footer className={classes.footer}>
 			<Container className={classes.footer__container}>
 				<div className={classes.footer__logo}>
-					<Logo fill='#fff' />
+					<Link href='/' passHref>
+						<Logo fill='#fff' />
+					</Link>
 				</div>
 				<ul className={classes.footer__socials}>
 					<li>
@@ -35,16 +38,16 @@ const Footer = () => {
 				</ul>
 				<ul className={classes.footer__links}>
 					<li>
-						<a href='#'>home</a>
+						<Link href='/'>home</Link>
 					</li>
 					<li>
-						<a href='#'>stories</a>
+						<Link href='/stories'>stories</Link>
 					</li>
 					<li>
-						<a href='#'>features</a>
+						<Link href='/features'>features</Link>
 					</li>
 					<li>
-						<a href='#'>pricing</a>
+						<Link href='/pricing'>pricing</Link>
 					</li>
 				</ul>
 
