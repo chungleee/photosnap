@@ -8,7 +8,7 @@ export const featuredStories = [
 	{
 		images: {
 			mobile: '/assets/stories/mobile/mountains.jpg',
-			tablet: '/assets/stories/desktop/mountains.jpg',
+			desktop: '/assets/stories/desktop/mountains.jpg',
 		},
 		title: 'The Mountains',
 		author: 'John Appleseed',
@@ -16,7 +16,7 @@ export const featuredStories = [
 	{
 		images: {
 			mobile: '/assets/stories/mobile/cityscapes.jpg',
-			tablet: '/assets/stories/desktop/cityscapes.jpg',
+			desktop: '/assets/stories/desktop/cityscapes.jpg',
 		},
 		title: 'Sunset Cityscapes',
 		author: 'Benjamin Cruz',
@@ -24,7 +24,7 @@ export const featuredStories = [
 	{
 		images: {
 			mobile: '/assets/stories/mobile/18-days-voyage.jpg',
-			tablet: '/assets/stories/desktop/18-days-voyage.jpg',
+			desktop: '/assets/stories/desktop/18-days-voyage.jpg',
 		},
 		title: '18 Days Voyage',
 		author: 'Alexei Borodin',
@@ -32,7 +32,7 @@ export const featuredStories = [
 	{
 		images: {
 			mobile: '/assets/stories/mobile/architecturals.jpg',
-			tablet: '/assets/stories/desktop/architecturals.jpg',
+			desktop: '/assets/stories/desktop/architecturals.jpg',
 		},
 		title: 'Architecturals',
 		author: 'Samantha Brooke ',
