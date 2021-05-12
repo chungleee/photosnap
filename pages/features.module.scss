@@ -1,0 +1,32 @@
+@import '../styles/mixins';
+
+.featured__cards__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+
+	.feature__cards__grid {
+		align-items: center;
+
+		@include break-tablet {
+			justify-content: space-evenly;
+		}
+
+		@include break-desktop {
+			flex-direction: row;
+			justify-content: space-evenly;
+		}
+	}
+}
+
+.feature__card {
+	@include break-tablet {
+		width: 40%;
+	}
+
+	@include break-desktop {
+		width: 30%;
+	}
+}
