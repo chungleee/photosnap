@@ -50,7 +50,13 @@ const Home = () => {
 
 			<Grid className={classes.featured__stories__grid}>
 				{featuredStories.map((storyData) => {
-					return <StoryCard data={storyData} key={storyData.title} />;
+					return (
+						<StoryCard
+							data={storyData}
+							key={storyData.title}
+							className={classes.featured__storycards}
+						/>
+					);
 				})}
 			</Grid>
 
