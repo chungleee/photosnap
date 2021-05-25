@@ -3,6 +3,10 @@
 .featured__stories__grid {
 	@include break-desktop {
 		flex-wrap: unset;
+
+		.featured__storycards {
+			width: 25%;
+		}
 	}
 }
 

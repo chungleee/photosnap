@@ -19,7 +19,9 @@ const Header = () => {
 		<header className={classes.header}>
 			<Container className={classes.header__container}>
 				<div>
-					<Logo />
+					<Link href='/' passHref>
+						<Logo />
+					</Link>
 				</div>
 				<div className={classes.menu}>
 					<ul>
