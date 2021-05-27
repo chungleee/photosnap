@@ -12,8 +12,11 @@ import {
 	featuredStories,
 	homecardAssets,
 } from '../data/homeData';
+// import Prismic from '@prismicio/client';
+// import { Client } from '../prismic/prismic-config';
 
-const Home = () => {
+const Home = ({ featured_stories }) => {
+	// console.log('stories from props: ', featured_stories);
 	return (
 		<div>
 			<Hero
@@ -75,5 +78,17 @@ const Home = () => {
 		</div>
 	);
 };
+
+// export const getStaticProps = async (context) => {
+// 	const featured_stories = await Client.query(
+// 		Prismic.Predicates.at('document.type', 'featured_stories')
+// 	);
+
+// 	return {
+// 		props: {
+// 			featured_stories,
+// 		},
+// 	};
+// };
 
 export default Home;
